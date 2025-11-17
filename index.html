@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bioenergia Humana S.A. — Projeto Piloto</title>
+  <meta name="description" content="Projeto piloto Bioenergia Humana S.A.: transformar dejetos humanos em biogás e biofertilizante embalado. Piloto 1.000 pessoas/dia. Missão, produtos, operações, projeção financeira e roadmap." />
+  <style>
+    /* ====== Reset e variáveis ====== */
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --muted:#58606a;
+      --accent:#07203b;
+      --brand:#0b8f5b;
+      --cta:#ffb84d;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; background:var(--bg); color:var(--accent); line-height:1.5}
+    a{color:var(--brand);text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:26px auto;padding:0 18px}
+    header.site-header{background:linear-gradient(180deg,#052033 0%, #073047 100%);color:#fff;padding:20px;border-radius:10px}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;max-width:var(--maxw);margin:0 auto}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#13a86b,#0b8f5b);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:20px;box-shadow:0 6px 18px rgba(11,143,91,0.15)}
+    h1.title{font-size:1.4rem}
+    .tagline{opacity:0.95;font-size:0.95rem}
+    nav.top-nav{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    nav.top-nav a{color:#e6f3ee;padding:8px 10px;border-radius:8px;font-size:0.95rem}
+    nav.top-nav a:hover{background:rgba(255,255,255,0.04)}
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:18px}
+    @media(max-width:980px){.hero{grid-template-columns:1fr}}
+    .hero-card{background:linear-gradient(180deg,#0b2833 0%, #06303b 70%);color:#fff;padding:20px;border-radius:10px;box-shadow:0 10px 30px rgba(3,10,18,0.35)}
+    .hero-cta{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+    .btn{background:var(--cta);border:none;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:700}
+    .btn.alt{background:transparent;border:1px solid rgba(255,255,255,0.12);color:#fff}
+    .summary{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 8px 22px rgba(2,6,23,0.06)}
+    /* main sections */
+    main{margin-top:18px}
+    .section{background:var(--card);padding:18px;border-radius:10px;margin-bottom:14px;box-shadow:0 6px 18px rgba(9,10,14,0.04)}
+    h2{margin-bottom:8px}
+    .muted{color:var(--muted);font-size:0.98rem}
+    .two-col{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    @media(max-width:960px){.two-col{grid-template-columns:1fr}}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:10px}
+    .card-compact{padding:12px;border-radius:8px;background:linear-gradient(180deg,#fff,#fbfdff);box-shadow:0 6px 18px rgba(8,9,14,0.04)}
+    .kpi{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .kpi .item{background:#f3fff6;padding:10px;border-radius:8px;min-width:140px}
+    .kpi .item strong{display:block;font-size:1.05rem;color:var(--brand)}
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    table th, table td{padding:8px;border:1px solid #eef2f4;text-align:left}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:0.95rem;padding:18px 0}
+    /* small */
+    .lead{font-size:1rem;color:#334; margin-top:6px}
+    .note{font-size:0.9rem;color:var(--muted)}
+    code.kbd{background:#0b1724;color:#fff;padding:3px 6px;border-radius:6px;font-family:monospace;font-size:0.9rem}
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-inner wrap">
+      <div class="brand" aria-hidden="false">
+        <div class="logo" aria-hidden="true">BH</div>
+        <div>
+          <h1 class="title">Bioenergia Humana S.A.</h1>
+          <div class="tagline">Transformando dejetos humanos em biogás e biofertilizante local — piloto: 1.000 pessoas/dia</div>
+        </div>
+      </div>
+
+      <nav class="top-nav" role="navigation" aria-label="Navegação principal">
+        <a href="#sumario">Resumo</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#operacoes">Operações</a>
+        <a href="#financeiro">Financeiro</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-card" aria-labelledby="hero-title">
+        <div id="hero-title" style="font-size:1.2rem;font-weight:700">Sumário executivo</div>
+        <p class="lead">A <strong>Bioenergia Humana S.A.</strong> transforma dejetos humanos em biogás e biofertilizante embalado (latinha 100 g, sachê 1 kg, saco 20 kg, fardo 50 kg). O projeto-piloto considera entrada equivalente a <strong>1.000 pessoas/dia</strong> para validação operacional e comercial.</p>
+        <p class="muted">Proposta de valor: provar, com segurança e transparência, que dejetos descartados podem virar energia e insumo agrícola, reduzindo emissões e fechando um ciclo circular.</p>
+
+        <div class="hero-cta">
+          <button class="btn" onclick="document.getElementById('produtos').scrollIntoView({behavior:'smooth'})">Ver produtos</button>
+          <button class="btn alt" onclick="document.getElementById('operacoes').scrollIntoView({behavior:'smooth'})">Entenda as operações</button>
+          <button class="btn alt" onclick="showDoc()">Ver documento-base</button>
+        </div>
+
+        <div class="kpi" aria-hidden="false">
+          <div class="item"><strong>1.000</strong><span class="note">pessoas/dia (piloto)</span></div>
+          <div class="item"><strong>≈50 m³/dia</strong><span class="note">biogás estimado</span></div>
+          <div class="item"><strong>≈11.680 kg/ano</strong><span class="note">sólidos secos pós-processamento</span></div>
+        </div>
+      </div>
+
+      <aside class="summary" aria-labelledby="quick-title">
+        <h3 id="quick-title">Resumo rápido de produtos</h3>
+        <ul class="muted" style="margin-top:8px">
+          <li><strong>Biogás:</strong> geração por biodigestão anaeróbica.</li>
+          <li><strong>Biofertilizante embalado:</strong> latinha 100 g, sachê 1 kg, saco 20 kg, fardo 50 kg.</li>
+          <li><strong>Serviços B2B:</strong> coleta selada, logística, laudos e certificação.</li>
+          <li><strong>Educação:</strong> palestras e kits informativos para transparência sanitária.</li>
+        </ul>
+        <div style="margin-top:10px">
+          <button class="btn" onclick="document.getElementById('financeiro').scrollIntoView({behavior:'smooth'})">Ver projeção financeira</button>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Main content -->
+    <main>
+      <!-- Sumário executivo detalhado -->
+      <section id="sumario" class="section" aria-labelledby="sumario-title">
+        <h2 id="sumario-title">1. Sumário executivo</h2>
+        <p class="muted">A Bioenergia Humana S.A. propõe um sistema integrado de coleta, biodigestão e processamento do digestato para produzir biogás e um biofertilizante seguro e embalado. O piloto opera com volume equivalente a 1.000 pessoas/dia para validar tecnologia, protocolos sanitários, logística e viabilidade comercial.</p>
+        <p class="note" style="margin-top:8px"><strong>Proposta de valor:</strong> transformar passivo sanitário em energia e insumo agrícola, com transparência, segurança e componente educativo.</p>
+      </section>
+
+      <!-- Informações da empresa -->
+      <section id="empresa" class="section" aria-labelledby="empresa-title">
+        <h2 id="empresa-title">2. Informações da empresa</h2>
+        <p class="muted"><strong>Nome:</strong> Bioenergia Humana S.A.<br>
+        <strong>Base operacional:</strong> Maceió — AL<br>
+        <strong>Missão:</strong> Reaproveitar fezes e dejetos humanos de forma segura, gerando energia, fertilizante embalado e impacto educativo.</p>
+      </section>
+
+      <!-- Produtos -->
+      <section id="produtos" class="section" aria-labelledby="produtos-title">
+        <h2 id="produtos-title">3. Produtos e serviços</h2>
+        <div class="cards">
+          <div class="card-compact">
+            <h4>Biogás (biodigestão)</h4>
+            <p class="muted">Geração de biogás por digestão anaeróbica dos dejetos — pode ser usado localmente para aquecimento, geração elétrica em micro-UTEs, ou processado para uso veicular com tratamento adicional.</p>
+          </div>
+          <div class="card-compact">
+            <h4>Biofertilizante embalado</h4>
+            <p class="muted">Produto final tratado e esterilizado, embalado em formatos para diferentes públicos: <strong>Latinha 100 g</strong>, <strong>Sachê 1 kg</strong>, <strong>Saco 20 kg</strong>, <strong>Fardo 50 kg</strong>.</p>
+          </div>
+          <div class="card-compact">
+            <h4>Serviço de coleta e logística</h4>
+            <p class="muted">Coleta selada de dejetos de condomínios, hospitais, eventos; transporte e destino seguro para a planta de processamento.</p>
+          </div>
+          <div class="card-compact">
+            <h4>Educação e marketing</h4>
+            <p class="muted">Palestras, kits informativos e rotulagem transparente para derrubar tabus, explicar protocolos sanitários e apoiar vendas B2C/B2B.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mercado e público -->
+      <section id="mercado" class="section" aria-labelledby="mercado-title">
+        <h2 id="mercado-title">4. Mercado e público-alvo</h2>
+        <p class="muted">Público-alvo: prefeituras, companhias de saneamento, cooperativas agrícolas, lojas agro, hortas comunitárias, escolas e eventos de sustentabilidade. Diferencial: produto embalado com origem circular e narrativa educativa sobre segurança sanitária.</p>
+      </section>
+
+      <!-- Operações -->
+      <section id="operacoes" class="section" aria-labelledby="operacoes-title">
+        <h2 id="operacoes-title">5. Operações</h2>
+        <p class="muted">Processo resumido:</p>
+        <ol class="muted" style="margin-top:10px">
+          <li>Coleta selada de dejetos →</li>
+          <li>Biodigestão anaeróbica (produção de biogás) →</li>
+          <li>Tratamento e desidratação do digestato →</li>
+          <li>Processamento e embalagem do biofertilizante →</li>
+          <li>Distribuição e vendas B2B/B2C.</li>
+        </ol>
+        <p class="note" style="margin-top:8px">Pontos-chave de controle: protocolos de segurança sanitária, laudos microbiológicos, rotulagem e canais de venda.</p>
+      </section>
+
+      <!-- Produção e capacidades -->
+      <section id="capacidade" class="section" aria-labelledby="capacidade-title">
+        <h2 id="capacidade-title">6. Produção e capacidades (piloto)</h2>
+        <p class="muted">Parâmetros usados para o planejamento do piloto (1.000 pessoas/dia):</p>
+
+        <table aria-describedby="capacidade-desc" style="margin-top:10px">
+          <thead><tr><th>Item</th><th>Estimativa</th></tr></thead>
+          <tbody>
+            <tr><td>Matéria-prima (fezes úmidas)</td><td>≈ 128 kg / dia</td></tr>
+            <tr><td>Biogás estimado</td><td>≈ 50 m³ / dia</td></tr>
+            <tr><td>Sólidos secos disponíveis (após processamento)</td><td>≈ 32 kg / dia → ≈ 11.680 kg / ano</td></tr>
+          </tbody>
+        </table>
+
+        <p class="note" id="capacidade-desc" style="margin-top:8px">Com os sólidos secos é possível embalar fertilizante nos formatos descritos para atender desde hortas escolares até agricultura em pequena escala.</p>
+      </section>
+
+      <!-- Financeiro -->
+      <section id="financeiro" class="section" aria-labelledby="financeiro-title">
+        <h2 id="financeiro-title">7. Projeção financeira (resumo)</h2>
+        <div class="two-col">
+          <div>
+            <p class="muted">Visão geral do fluxo projetado para o piloto:</p>
+            <ul class="muted" style="margin-top:8px">
+              <li><strong>Receita anual estimada:</strong> R$ 174.711 (mix: embalagens + biogás)</li>
+              <li><strong>OPEX anual (referência):</strong> R$ 345.000</li>
+              <li><strong>CAPEX inicial (referência piloto):</strong> R$ 475.000</li>
+              <li><strong>Necessidade de caixa 1º ano (CAPEX + OPEX – Receita):</strong> ≈ R$ 645.289</li>
+              <li><strong>Pedido sugerido:</strong> R$ 800.000 (uso: planta & equipamentos R$500k; capital de giro R$200k; certificação/marketing R$100k)</li>
+            </ul>
+          </div>
+
+          <aside class="card-compact">
+            <h4>Roadmap resumido</h4>
+            <ul class="muted" style="margin-top:8px">
+              <li><strong>0–6 meses:</strong> planta montada + lote piloto ampliado</li>
+              <li><strong>6–12 meses:</strong> contratos B2B iniciais (cooperativas/prefeituras) + certificações</li>
+              <li><strong>12–36 meses:</strong> escala comercial rumo à lucratividade</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Segurança e compliance -->
+      <section id="seguranca" class="section" aria-labelledby="seguranca-title">
+        <h2 id="seguranca-title">8. Segurança sanitária e qualidade</h2>
+        <p class="muted">A operação exige protocolos rígidos: coleta selada, processos de biodigestão controlados, testes microbiológicos, esterilização do digestato antes da embalagem e rotulagem clara para uso seguro. Esses controles são essenciais para aceitação pública e certificações.</p>
+      </section>
+
+      <!-- Extensões e oportunidades -->
+      <section id="oportunidades" class="section" aria-labelledby="oportunidades-title">
+        <h2 id="oportunidades-title">9. Oportunidades e extensões</h2>
+        <ul class="muted" style="margin-top:8px">
+          <li>Contratos com prefeituras e companhias de saneamento para gestão de resíduos urbanos.</li>
+          <li>Linhas de produto para agricultura urbana e horta escolar.</li>
+          <li>Parcerias com universidades para pesquisa e melhoria de processos.</li>
+          <li>Educação e comunicação para reduzir estigma e aumentar demanda.</li>
+        </ul>
+      </section>
+
+      <!-- CTA / Contato -->
+      <section id="contato" class="section" aria-labelledby="contato-title">
+        <h2 id="contato-title">Contato & próximos passos</h2>
+        <p class="muted">Deseja que eu gere: um pitch deck, um ensaio técnico com referências ou uma linha do tempo visual para apresentação? Escolha abaixo e eu preparo o material.</p>
+
+        <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
+          <button class="btn" onclick="action('pitch')">Gerar pitch deck</button>
+          <button class="btn" onclick="action('ensaio')">Gerar ensaio técnico</button>
+          <button class="btn alt" onclick="action('timeline')">Gerar linha do tempo visual</button>
+        </div>
+
+        <p class="note" style="margin-top:12px">Documento-base usado para criar essa página: plano de negócios anexo. :contentReference[oaicite:1]{index=1}</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="note">© 2025 Bioenergia Humana S.A. — Conteúdo adaptado do material enviado para apresentação do projeto.</div>
+    </footer>
+  </div>
+
+  <script>
+    // Ações rápidas das CTAs (simples, offline)
+    function showDoc(){
+      alert('Arquivo-base utilizado para esta página: "Trabalho Fabrício.pdf" (anexo). Abra o PDF para ver os detalhes numéricos e tabelas.');
+    }
+    function action(type){
+      if(type==='pitch') alert('Solicitado: pitch deck. Vou gerar um esboço de apresentação (slides) com base no plano.');
+      if(type==='ensaio') alert('Solicitado: ensaio técnico. Vou gerar um rascunho com referências e estrutura.');
+      if(type==='timeline') alert('Solicitado: linha do tempo visual. Vou preparar um esboço gráfico interativo.');
+    }
+
+    // Navegação suave para âncoras
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        var id = this.getAttribute('href').slice(1);
+        var el = document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script>
+</body>
+</html>
